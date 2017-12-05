@@ -46,7 +46,7 @@
             method: 'post',
             url: 'https://api.github.com/user/repos',
             headers: {
-              'Authorization': 'token eed1387a0860f2e2156080b2cdd842997508f23e',
+              'Authorization': 'token 8f26b213ec73885b864222a7103fa6106b5b4172',
               'Content-Type': 'application/json'
             },
             data: {
