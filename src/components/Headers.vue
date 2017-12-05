@@ -1,17 +1,14 @@
 <template>
   <ul class="nav nav-tabs">
     <router-link
-        to="/"
+        :to="{ name: 'home' }"
         tag="li"
         active-class="active"
-        exact>
-        <a>Home</a>
-    </router-link>
+        exact><a>Home</a></router-link>
+
     <router-link
-        to="/create"
+        :to="{ name: 'createRepo' }"
         tag="li"
-        active-class="active">
-        <a>Create</a>
-    </router-link>
+        active-class="active"><a>Create</a></router-link>
   </ul>
 </template>

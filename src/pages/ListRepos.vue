@@ -1,6 +1,9 @@
 <template>
   <div class="text-center">
-    <button class="btn btn-primary" @click.prevent="createPage">CREATE NEW REPO</button>
+    <router-link
+        tag="a"
+        :to="{ name: 'createRepo' }"
+        class="btn btn-primary">CREATE NEW REPO</router-link>
 
     <list-repo :listRepo="repos"></list-repo>
     <ul v-if="errors && errors.length">
@@ -24,11 +27,6 @@
     },
     components: {
       'list-repo': ListRepo,
-    },
-    methods: {
-      createPage() {
-        this.$router.push('/create');
-      },
     },
     created() {
       axios.get('https://api.github.com/users/moon-hai/repos')

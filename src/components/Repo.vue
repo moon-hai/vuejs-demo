@@ -8,7 +8,10 @@
         {{ repo.name }}
       </div>
       <div class="repo-control text-center">
-        <a class="btn btn-primary" @click.prevent="editPage">EDIT</a>
+        <router-link
+            tag="a"
+            :to="{ name: 'editRepo', params: {name: repo.name} }"
+            class="btn btn-primary">EDIT</router-link>
         <a class="btn btn-danger" @click.prevent="deleteRepoFn(repo)">DELETE</a>
       </div>
     </div>

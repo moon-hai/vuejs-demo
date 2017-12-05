@@ -12,17 +12,20 @@ export default new Router({
       path: '/',
       name: 'ListRepos',
       component: ListRepos,
+      name: 'home'
     },
     {
       path: '/create',
       name: 'CreateRepo',
       component: CreateRepo,
+      name: 'createRepo'
     },
     {
       path: '/edit/:name',
       name: 'EditRepo',
       component: EditRepo,
-      props: true
+      props: true,
+      name: 'editRepo'
     },
   ],
   mode: 'history',
