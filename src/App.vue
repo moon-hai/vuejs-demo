@@ -3,7 +3,7 @@
     <!-- Header -->
     <div class="row">
       <div class="col-xs-6 col-xs-offset-3">
-        <headers></headers>
+        <router-view name="header-top"></router-view>
       </div>
     </div>
 

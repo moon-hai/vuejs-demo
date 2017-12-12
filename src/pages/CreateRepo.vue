@@ -46,7 +46,7 @@
             method: 'post',
             url: 'https://api.github.com/user/repos',
             headers: {
-              'Authorization': 'token 8f26b213ec73885b864222a7103fa6106b5b4172',
+              'Authorization': 'token 99ca4fc6cac26d8bd745dbf4e9848a7a0995edc5',
               'Content-Type': 'application/json'
             },
             data: {
@@ -66,7 +66,18 @@
           this.isSuccess = false;
         }
       }
-    }
+    },
+    beforeRouteLeave(to, from, next) {
+      if (this.confirmed) {
+        next();
+      } else {
+        if (confirm('You have not create!! Do you want to leave???')) {
+          next();
+        } else {
+          next(false);
+        }
+      }
+    },
   };
 </script>
 

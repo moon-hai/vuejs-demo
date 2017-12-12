@@ -39,7 +39,7 @@
             method: 'delete',
             url: 'https://api.github.com/repos/moon-hai/' + repo.name,
             headers: {
-              'Authorization': 'token 8f26b213ec73885b864222a7103fa6106b5b4172',
+              'Authorization': 'token 99ca4fc6cac26d8bd745dbf4e9848a7a0995edc5',
               'Content-Type': 'application/json'
             },
           })

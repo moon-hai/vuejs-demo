@@ -10,7 +10,7 @@
       <div class="repo-control text-center">
         <router-link
             tag="a"
-            :to="{ name: 'editRepo', params: {name: repo.name} }"
+            :to="link"
             class="btn btn-primary">EDIT</router-link>
         <a class="btn btn-danger" @click.prevent="deleteRepoFn(repo)">DELETE</a>
       </div>
@@ -23,6 +23,21 @@
 
   export default {
     props: ['repo'],
+    data() {
+      return {
+        link: {
+          name: 'editRepo',
+          params: {
+            id: this.repo.name,
+          },
+          query: {
+            locale: 'en',
+            q: '100',
+          },
+          hash: '#data',
+        }
+      }
+    },
     methods: {
       closeControlFn() {
         this.showControl = false;
@@ -31,8 +46,8 @@
         this.$emit('deleteRepo', repo);
       },
       editPage() {
-        const name = this.repo.name;
-        this.$router.push('/edit/'+name);
+        const id = this.repo.name;
+        this.$router.push('/edit/'+id);
       }
     }
   }
