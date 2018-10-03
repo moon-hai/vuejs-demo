@@ -1,6 +1,12 @@
-# demo-01
+# Simple github with vuejs
 
 > A Vue.js project
+
+## Action
+1. Fetch all repos
+2. Add repo
+3. Edit repo
+4. Delete repo
 
 ## Build Setup
 
